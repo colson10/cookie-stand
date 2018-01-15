@@ -14,27 +14,45 @@ var firstAndPike = {
   minCust: 23,
   maxCust: 65,
   aveCust: 6.3,
+  hourlySalesProjections: [],
   randomNum: function() {
     return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
   },
   aveCookiesPerHour: function() {
     return Math.round(this.randomNum() * this.aveCust);
   },
-  hourlySalesProjections: function() {
+  populateHourlySales: function() {
     // I want to return an array with aveCookiesPerHour for each index in the array locationHours (15)
     // for loop running through the length of locationHours, push each value to an empty array.
     // return the array
-    var myArray = [];
     for (var i = 0; i < locationHours.length; i++) {
-      myArray.push(this.aveCookiesPerHour());
+      this.hourlySalesProjections.push(this.aveCookiesPerHour());
     }
-    return myArray;
   },
-  totalDailySalesProjection: function() {
-    var total = 0;
-    for (var i = 0; i < locationHours.length; i++) {
-      total += this.aveCookiesPerHour();
+  render: function() {
+    // access ul from index.html
+    var ulEL = document.getElementById('pike');
+
+    for (var i = 0; i < this.hourlySalesProjections.length; i++) {
+      // create list item elements
+      var liEL = document.createElement('li');
+      // give items content
+      liEL.textContent = locationHours[i] + ': ' + this.hourlySalesProjections[i];
+      // append list items to ul element
+      ulEL.appendChild(liEL);
     }
-    return total;
-  }
+  },
+  // renderTotalDailySales: function() {
+  //   var total = 0;
+  //   for (var i = 0; i < locationHours.length; i++) {
+  //     total += this.aveCookiesPerHour();
+  //   }
+  //   var ulEL = document.getElementById('pike');
+  //   var liEL = document.createElement('li');
+  //   liEL.textContent = 'Total: ' + total + ' cookies sold per day.';
+  //   ulEL.appendChild(liEL);
+  // },
 };
+firstAndPike.populateHourlySales();
+firstAndPike.render();
+// firstAndPike.renderTotalDailySales();
