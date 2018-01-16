@@ -151,3 +151,46 @@ var seattleCenter = {
 seattleCenter.populateHourlySales();
 seattleCenter.render();
 seattleCenter.renderTotalDailySales();
+
+
+var capitol = {
+  minCust: 20,
+  maxCust: 38,
+  aveCust: 2.3,
+  hourlySalesProjections: [],
+  randomNum: function() {
+    return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+  aveCookiesPerHour: function() {
+    return Math.round(this.randomNum() * this.aveCust);
+  },
+  populateHourlySales: function() {
+    for (var i = 0; i < locationHours.length; i++) {
+      this.hourlySalesProjections.push(this.aveCookiesPerHour());
+    }
+  },
+  render: function() {
+    var ulEl = document.getElementById('capitol');
+
+    for (var i = 0; i < this.hourlySalesProjections.length; i++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = locationHours[i] + ': ' + this.hourlySalesProjections[i];
+      ulEl.appendChild(liEl);
+    }
+  },
+  renderTotalDailySales: function() {
+    var ulEl = document.getElementById('capitol');
+    var total = 0;
+
+    for (var i = 0; i < this.hourlySalesProjections.length; i++) {
+      total += this.hourlySalesProjections[i];
+    }
+    var liEl = document.createElement('li');
+    liEl.textContent = 'Total: ' + total + ' cookies sold per day.';
+    ulEl.appendChild(liEl);
+  }
+};
+
+capitol.populateHourlySales();
+capitol.render();
+capitol.renderTotalDailySales();
