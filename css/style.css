@@ -28,6 +28,11 @@ h3 {
   text-align: left;
 }
 
+ul {
+  background-color: salmon;
+  width: 250px;
+}
+
 li {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 5px;
@@ -36,9 +41,4 @@ li {
 
 #logo {
   height: 100px;
-}
-
-.location-sales {
-  margin: 20px auto;
-  padding: 10px 100px;
 }
