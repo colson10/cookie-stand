@@ -40,9 +40,9 @@ li {
   text-align: left;
 }
 
-table {
+table{
   border: 1px solid black;
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   background-color: rgb(238, 238, 238)
 }
@@ -55,6 +55,12 @@ p {
   width: 50%;
   text-align: left;
   margin: 0 auto;
+}
+
+th, td {
+  font-size: 16px;
+  padding: 10px 10px;
+  border: 1px solid black;
 }
 
 footer h4, h5{
@@ -74,4 +80,10 @@ footer h4, h5{
   width: 200px;
   margin-top: 25px;
   color: white;
+}
+
+#name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
