@@ -42,17 +42,17 @@ var firstAndPike = {
       ulEL.appendChild(liEL);
     }
   },
-  // renderTotalDailySales: function() {
-  //   var total = 0;
-  //   for (var i = 0; i < locationHours.length; i++) {
-  //     total += this.aveCookiesPerHour();
-  //   }
-  //   var ulEL = document.getElementById('pike');
-  //   var liEL = document.createElement('li');
-  //   liEL.textContent = 'Total: ' + total + ' cookies sold per day.';
-  //   ulEL.appendChild(liEL);
-  // },
+  renderTotalDailySales: function() {
+    var total = 0;
+    for (var i = 0; i < this.hourlySalesProjections.length; i++) {
+      total += this.hourlySalesProjections[i];
+    }
+    var ulEL = document.getElementById('pike');
+    var liEL = document.createElement('li');
+    liEL.textContent = 'Total: ' + total + ' cookies sold per day.';
+    ulEL.appendChild(liEL);
+  },
 };
 firstAndPike.populateHourlySales();
 firstAndPike.render();
-// firstAndPike.renderTotalDailySales();
+firstAndPike.renderTotalDailySales();
