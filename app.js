@@ -32,6 +32,7 @@ Store.prototype.render = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = this.name;
+  tdEl.setAttribute('id', 'name');
   trEl.appendChild(tdEl);
   var total = 0;
   for (var i = 0; i < this.hourlySalesProjections.length; i++) {
