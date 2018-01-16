@@ -1,7 +1,11 @@
 'use strict';
 
-var locationHours = ['', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
+var locationHours = ['Location', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
 var storeTable = document.getElementById('stores');
+
+function reducer(a, b) {
+  return a + b;
+}
 
 function Store(name, minCust, maxCust, aveCust) {
   this.name = name;
@@ -51,7 +55,7 @@ function rowOfTotals() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = 'Location Totals';
-  tdEl.setAttribute('id', 'name');
+  tdEl.setAttribute('id', 'total');
   trEl.appendChild(tdEl);
   for (var i = 0; i < firstAndPike.hourlySalesProjections.length; i++) {
     var total = firstAndPike.hourlySalesProjections[i] + seaTac.hourlySalesProjections[i] + seattleCenter.hourlySalesProjections[i] + capitolHill.hourlySalesProjections[i] + alki.hourlySalesProjections[i];
@@ -59,6 +63,10 @@ function rowOfTotals() {
     tdEl.textContent = total;
     trEl.appendChild(tdEl);
   }
+  var totalAll = firstAndPike.hourlySalesProjections.reduce(reducer) + seaTac.hourlySalesProjections.reduce(reducer) + seattleCenter.hourlySalesProjections.reduce(reducer) + capitolHill.hourlySalesProjections.reduce(reducer) + alki.hourlySalesProjections.reduce(reducer);
+  tdEl = document.createElement('td');
+  tdEl.textContent = totalAll;
+  trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
 }
 
