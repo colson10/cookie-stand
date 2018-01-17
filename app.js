@@ -55,7 +55,7 @@ function makeHeaderRow() {
 function rowOfTotals() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
-  tdEl.textContent = 'Location Totals';
+  tdEl.textContent = 'Totals';
   tdEl.setAttribute('id', 'total');
   trEl.appendChild(tdEl);
   for (var i = 0; i < firstAndPike.hourlySalesProjections.length; i++) {
