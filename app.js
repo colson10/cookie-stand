@@ -19,6 +19,7 @@ Store.prototype.populateHourlySales = function() {
   for (var i = 0; i < locationHours.length - 2; i++) {
     this.hourlySalesProjections.push(Math.round((Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust)) * this.aveCust));
   }
+  return this;
 };
 
 Store.prototype.render = function() {
@@ -50,7 +51,7 @@ function makeHeaderRow() {
   }
   storeTable.appendChild(trEl);
 }
-// last row totaling all locations for each hour and total
+
 function rowOfTotals() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -77,8 +78,7 @@ var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
 makeHeaderRow();
-firstAndPike.populateHourlySales();
-firstAndPike.render();
+firstAndPike.populateHourlySales().render();
 seaTac.populateHourlySales();
 seaTac.render();
 seattleCenter.populateHourlySales();
