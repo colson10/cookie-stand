@@ -78,12 +78,8 @@ var alki = new Store('Alki', 2, 16, 4.6);
 
 makeHeaderRow();
 firstAndPike.populateHourlySales().render();
-seaTac.populateHourlySales();
-seaTac.render();
-seattleCenter.populateHourlySales();
-seattleCenter.render();
-capitolHill.populateHourlySales();
-capitolHill.render();
-alki.populateHourlySales();
-alki.render();
+seaTac.populateHourlySales().render();
+seattleCenter.populateHourlySales().render();
+capitolHill.populateHourlySales().render();
+alki.populateHourlySales().render();
 rowOfTotals();
