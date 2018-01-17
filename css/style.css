@@ -29,49 +29,58 @@ h3 {
   text-align: left;
 }
 
-ul {
-  width: 200px;
-  padding-left: 20px;
-}
-
-li {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(82, 82, 82);
-  text-align: left;
-}
-
-table {
-  border: 1px solid black;
-  width: 1000px;
-  margin: 0 auto;
-  background-color: rgb(238, 238, 238)
-}
-
-#logo {
-  height: 150px;
-}
-
 p {
   width: 50%;
   text-align: left;
   margin: 0 auto;
 }
 
+table{
+  border: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgb(238, 238, 238)
+}
+
+th, td {
+  font-size: 16px;
+  padding: 10px 10px;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 footer h4, h5{
   margin: 25px auto;
 }
 
-.location-list {
-  margin-left: auto;
-  margin-right: auto;
+.locations-table {
   background-color: rgb(50, 125, 187);
-  padding: 1px 10px 15px;
 }
 
-.location-list li {
+.locations-table th{
   font-size: 20px;
   text-align: center;
-  width: 200px;
+  width: 150px;
   margin-top: 25px;
   color: white;
+}
+
+.header-row {
+  font-weight: bold;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#logo {
+  height: 150px;
+}
+
+#total {
+  color: rgb(2, 192, 49);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
