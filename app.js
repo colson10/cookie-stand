@@ -5,6 +5,8 @@ var storeTable = document.getElementById('stores');
 function reducer(a, b) {
   return a + b;
 }
+var allLocations = [];
+
 
 function Store(name, minCust, maxCust, aveCust) {
   this.name = name;
@@ -12,6 +14,7 @@ function Store(name, minCust, maxCust, aveCust) {
   this.maxCust = maxCust;
   this.aveCust = aveCust;
   this.hourlySalesProjections = [];
+  allLocations.push(this);
 }
 
 Store.prototype.populateHourlySales = function() {
@@ -59,17 +62,43 @@ function rowOfTotals() {
   tdEl.setAttribute('id', 'total');
   trEl.appendChild(tdEl);
   for (var i = 0; i < firstAndPike.hourlySalesProjections.length; i++) {
-    var total = firstAndPike.hourlySalesProjections[i] + seaTac.hourlySalesProjections[i] + seattleCenter.hourlySalesProjections[i] + capitolHill.hourlySalesProjections[i] + alki.hourlySalesProjections[i];
+    //cycle through each location and total the values at index i for each location
+    var total = 0;
+    for (var x = 0; x < allLocations.length; x++) {
+      total += allLocations[x].hourlySalesProjections[i];
+    }
     tdEl = document.createElement('td');
     tdEl.textContent = total;
     trEl.appendChild(tdEl);
   }
-  var totalAll = firstAndPike.hourlySalesProjections.reduce(reducer) + seaTac.hourlySalesProjections.reduce(reducer) + seattleCenter.hourlySalesProjections.reduce(reducer) + capitolHill.hourlySalesProjections.reduce(reducer) + alki.hourlySalesProjections.reduce(reducer);
+  var totalAll = 0;
+  for (var j = 0; j < allLocations.length; j++) {
+    totalAll += allLocations[j].hourlySalesProjections.reduce(reducer);
+  }
   tdEl = document.createElement('td');
   tdEl.textContent = totalAll;
   trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
 }
+
+// function rowOfTotals() {
+//   var trEl = document.createElement('tr');
+//   var tdEl = document.createElement('td');
+//   tdEl.textContent = 'Totals';
+//   tdEl.setAttribute('id', 'total');
+//   trEl.appendChild(tdEl);
+//   for (var i = 0; i < firstAndPike.hourlySalesProjections.length; i++) {
+//     var total = firstAndPike.hourlySalesProjections[i] + seaTac.hourlySalesProjections[i] + seattleCenter.hourlySalesProjections[i] + capitolHill.hourlySalesProjections[i] + alki.hourlySalesProjections[i];
+//     tdEl = document.createElement('td');
+//     tdEl.textContent = total;
+//     trEl.appendChild(tdEl);
+//   }
+//   var totalAll = firstAndPike.hourlySalesProjections.reduce(reducer) + seaTac.hourlySalesProjections.reduce(reducer) + seattleCenter.hourlySalesProjections.reduce(reducer) + capitolHill.hourlySalesProjections.reduce(reducer) + alki.hourlySalesProjections.reduce(reducer);
+//   tdEl = document.createElement('td');
+//   tdEl.textContent = totalAll;
+//   trEl.appendChild(tdEl);
+//   storeTable.appendChild(trEl);
+// }
 
 var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
