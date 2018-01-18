@@ -29,6 +29,10 @@ h3 {
   text-align: left;
 }
 
+h5 {
+  text-align: center;
+}
+
 p {
   width: 50%;
   text-align: left;
@@ -49,46 +53,12 @@ th, td {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+tr:nth-child(odd) {
+  background-color: rgb(207, 207, 207);
+}
+
 footer h4, h5{
   margin: 25px auto;
-}
-
-.locations-table {
-  background-color: rgb(50, 125, 187);
-}
-
-.locations-table th{
-  font-size: 20px;
-  text-align: center;
-  width: 150px;
-  margin-top: 25px;
-  color: white;
-}
-
-.header-row {
-  font-weight: bold;
-}
-
-.name {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#logo {
-  height: 150px;
-}
-
-#total {
-  color: rgb(2, 192, 49);
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#store-form {
-  margin: 25px auto;
-  width: 500px;
-  border: 1px solid black;
 }
 
 form {
@@ -111,8 +81,58 @@ input {
   margin: 10px 20px;
 }
 
+.locations-table {
+  background-color: rgb(50, 125, 187);
+}
+
+.locations-table th{
+  font-size: 20px;
+  text-align: center;
+  width: 150px;
+  margin-top: 25px;
+  color: white;
+  background-color: rgb(34, 114, 235);
+}
+
+.header-row {
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  border-right: 3px solid black;
+}
+
+.hourly-totals {
+  color: rgb(1, 161, 41);
+  font-weight: bold;
+  border-top: 3px solid green;
+}
+
+#logo {
+  height: 150px;
+  border-radius: 10px;
+}
+
+#total {
+  color: rgb(1, 161, 41);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-right: 3px solid black;
+  border-top: 3px solid green;
+}
+
+#store-form {
+  margin: 25px auto;
+  width: 500px;
+  border: 1px solid black;
+  background-color: rgb(93, 178, 248);
+}
+
 #add-store {
   margin: 10px 50px;
   color: green;
 }
-
