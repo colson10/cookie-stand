@@ -6,14 +6,37 @@ body {
 
 header {
   text-align: center;
-  margin: 25px auto;
+  margin: 5px auto;
 }
+
+nav {
+  height: 40px;
+  margin: 10px auto 0px;
+  /* position: fixed; */
+}
+
+nav ul {
+  margin: 0 auto;
+  text-align: center;
+  /* display: inline-block; */
+}
+
+nav li {
+  display: inline-block;
+  padding: 5px 50px;
+  border: 2px solid black;
+}
+
+/* nav li::after {
+  content: '|';
+  margin: 0 50px;
+} */
 
 h1 {
   font-size: 48px;
   font-weight: bold;
   color: #F23054;
-  margin: 25px auto;
+  margin: 5px auto 10px;
   font-family: 'Amatic SC', cursive;
 }
 
