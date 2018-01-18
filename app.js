@@ -78,6 +78,7 @@ function rowOfTotals() {
     }
     tdEl = document.createElement('td');
     tdEl.textContent = total;
+    tdEl.setAttribute('class', 'hourly-totals');
     trEl.appendChild(tdEl);
   }
   var totalAll = 0;
@@ -86,6 +87,7 @@ function rowOfTotals() {
   }
   tdEl = document.createElement('td');
   tdEl.textContent = totalAll;
+  tdEl.setAttribute('class', 'hourly-totals');
   trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
 }
