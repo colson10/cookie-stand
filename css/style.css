@@ -1,26 +1,66 @@
 body {
-  background-color: #65E6E6;
-  color: rgb(70, 70, 70);
+  background-color: #36eee0;
+  color: #4c5270;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
   text-align: center;
-  margin: 25px auto;
+  margin: 5px auto;
 }
+
+nav {
+  height: 40px;
+  margin: 10px auto 0px;
+}
+
+nav ul {
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  width: 10%;
+  padding: 5px 5px;
+  border: 2px solid #4c5270;
+}
+
+nav li:first-child {
+  border: none;
+}
+
+nav li:last-child {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4c5270;
+}
+
+a:hover {
+  color: white;
+}
+
+#current-page {
+  color: #f652a0;
+}
+
 
 h1 {
-  font-size: 48px;
-  font-weight: bold;
-  color: #F23054;
-  margin: 25px auto;
-  font-family: 'Amatic SC', cursive;
-}
-
-h2 {
   font-size: 24px;
   margin: 30px auto;
   text-align: center;
+  color: #f652a0;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f652a0;
+  margin: 5px auto 10px;
+  font-family: 'Amatic SC', cursive;
 }
 
 h3 {
@@ -29,8 +69,16 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 h5 {
   text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
 }
 
 p {
@@ -81,17 +129,29 @@ input {
   margin: 10px 20px;
 }
 
-.locations-table {
-  background-color: rgb(50, 125, 187);
+.locations-table ul{
+  border-radius: 20px;
+  border: none;
+  background-color: #36eee0;
+  width: 960px;
 }
 
-.locations-table th{
-  font-size: 20px;
+.locations-table li{
+  display: inline-block;
   text-align: center;
-  width: 150px;
-  margin-top: 25px;
+  width: 200px;
   color: white;
   background-color: rgb(34, 114, 235);
+  border-radius: 20px;
+  border: none;
+}
+
+.locations-table li p {
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-row {
@@ -111,9 +171,20 @@ input {
   border-top: 3px solid green;
 }
 
+figure {
+  display: inline-block;
+}
+
+figcaption {
+  padding-bottom: 5px;
+}
+
 #logo {
   height: 150px;
   border-radius: 10px;
+  float: right;
+  margin: 0 250px 0 20px;
+  padding: 5px;
 }
 
 #total {
@@ -136,3 +207,63 @@ input {
   margin: 10px 50px;
   color: green;
 }
+
+#salmon {
+  width: 50px;
+}
+
+#about-us {
+  padding-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+#front-page {
+  margin: 0 80px 0 50px;
+}
+
+#family-pic {
+  text-align: center;
+  width: 350px;
+  border-radius: 100%;
+}
+
+#about-blurb {
+  line-height: 1.5;
+}
+
+#events-pics {
+  background-color: white;
+  border-radius: 100%;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#three-fish {
+  height: 150px;
+  padding: 10px 60px;
+}
+
+#chinook {
+  width: 100px;
+  margin: 0 0 75px 0;
+}
+
+#shirt {
+  padding: 20px;
+  width: 200px; 
+}
+
+#cutter {
+  padding: 20px;
+  width: 200px;
+}
+
+#frosted-cookie {
+  padding: 20px;
+  margin-bottom: 35px;
+  width: 200px;
+  float: right;
+}
+

@@ -9,16 +9,25 @@
   </head>
   <body>
     <header>
-      <img src="img/cookiemonster.png"/ alt="Picture of salmon jumping into Cookie Monster's mouth" id="logo">
-      <h1>Pat's Salmon Cookies</h1>
-    </header>
-    <h2>Daily Sales Projections by Hour and Location:</h2>
+      <nav>
+        <ul>
+          <li><img src="img/salmon.png" id="salmon"></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="sales.html" id="current-page">Admin Login</a></li>
+          <li><img src="img/salmon.png" id="salmon"></li>
+        </ul>
+      </nav>
+      <h2>Pat's Salmon Cookies</h2>
+    <header>
+    <h1>Daily Sales Projections by Hour and Location:</h1>
     <table id="stores">    
     </table>
     <form id="store-form">
       <fieldset>
         <legend>Add New Store</legend>
-
         <label for="storeName">Store Name</label>
         <input name="storeName" type="text">
         <br>
@@ -32,10 +41,8 @@
         <input name="aveCookiePer" type="number" step="0.1">
         <br>
         <button id="add-store">Add Store</button>
-
       </fieldset>
     </form>
-    <h5><a href="index.html">Back to Main Site</a></h5>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
