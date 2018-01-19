@@ -12,13 +12,11 @@ header {
 nav {
   height: 40px;
   margin: 10px auto 0px;
-  /* position: fixed; */
 }
 
 nav ul {
   margin: 0 auto;
   text-align: center;
-  /* display: inline-block; */
 }
 
 nav li {
@@ -36,10 +34,19 @@ nav li:last-child {
   border: none;
 }
 
-/* nav li::after {
-  content: '|';
-  margin: 0 50px;
-} */
+a {
+  text-decoration: none;
+  color: #4c5270;
+}
+
+a:hover {
+  color: white;
+}
+
+#current-page {
+  color: #f652a0;
+}
+
 
 h1 {
   font-size: 48px;
@@ -51,8 +58,9 @@ h1 {
 
 h2 {
   font-size: 24px;
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
+  color: #f652a0;
 }
 
 h3 {
@@ -61,8 +69,16 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 h5 {
   text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
 }
 
 p {
@@ -113,17 +129,29 @@ input {
   margin: 10px 20px;
 }
 
-.locations-table {
-  background-color: rgb(50, 125, 187);
+.locations-table ul{
+  border-radius: 20px;
+  border: none;
+  background-color: #36eee0;
+  width: 960px;
 }
 
-.locations-table th{
-  font-size: 20px;
+.locations-table li{
+  display: inline-block;
   text-align: center;
-  width: 150px;
-  margin-top: 25px;
+  width: 200px;
   color: white;
   background-color: rgb(34, 114, 235);
+  border-radius: 20px;
+  border: none;
+}
+
+.locations-table li p {
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-row {
@@ -176,10 +204,6 @@ input {
   width: 50px;
 }
 
-#chinook {
-  width: 50px;
-}
-
 #about-us {
   padding-top: 10px;
   font-size: 18px;
@@ -188,4 +212,32 @@ input {
 
 #front-page {
   margin: 0 80px 0 50px;
+}
+
+#family-pic {
+  text-align: center;
+  width: 350px;
+  border-radius: 100%;
+}
+
+#about-blurb {
+  line-height: 1.5;
+}
+
+#events-pics {
+  background-color: white;
+  border-radius: 100%;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#three-fish {
+  height: 150px;
+  padding: 10px 60px;
+}
+
+#chinook {
+  width: 100px;
+  margin: 0 0 75px 0;
 }
