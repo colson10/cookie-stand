@@ -8,7 +8,6 @@ function reducer(a, b) {
 }
 var allLocations = [];
 
-
 function Store(name, minCust, maxCust, aveCust) {
   this.name = name;
   this.minCust = minCust;
@@ -115,6 +114,9 @@ function addNewStore(event) {
   console.log(typeof newAveCust);
 
   new Store(newName, newMinCust, newMaxCust, newAveCust);
+
+  event.target.storeName.value = null;
+
 
   storeTable.innerHTML = '';
   makeHeaderRow();
